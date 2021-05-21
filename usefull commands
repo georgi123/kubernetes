@@ -10,4 +10,4 @@ kubectl label pod $POD_NAME version=v1
 kubectl delete service -l app=kubernetes-bootcamp
 #check if app still running in pod
 kubectl exec -ti $POD_NAME -- curl localhost:8080
-Running Multiple Instances of Your App
+#relicas #Running Multiple Instances of Your App
