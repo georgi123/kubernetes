@@ -1,0 +1,4 @@
+kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080
+kubectl describe services/kubernetes-bootcamp
+kubectl get pods -l app=kubernetes-bootcamp
+kubectl get services -l app=kubernetes-bootcamp
