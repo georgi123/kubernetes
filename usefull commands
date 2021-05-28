@@ -35,3 +35,22 @@ kubectl create -f service.yaml
 kubectl get svc
 kubectl describe svc webapp1-svc
 curl host01:30080
+############
+#docker Kompose
+curl -L https://github.com/kubernetes/kompose/releases/download/v1.9.0/kompose-linux-amd64 -o /usr/bin/kompose && chmod +x /usr/bin/kompose
+#create yaml file with settings
+kompose up
+kubectl get deployment,svc,pods,pvc
+#The command kompose convert will generate the files, viewable via ls
+kompose convert; ls
+kubectl apply -f frontend-service.yaml,redis-master-service.yaml,redis-slave-service.yaml,frontend-deployment.yaml,redis-master-deployment.yaml,redis-slave-deployment.yaml
+kompose --provider openshift convert
+#convet yaml to jason format
+kompose convert -j
+
+#The four pieces required for deployment
+#We've just performed four main things
+1) created a container 
+2) created the Kubernetes manifest 
+3) pushed the container to a registry  
+4) finally told Kubernetes all about these pieces with an updated manifest.
