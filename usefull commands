@@ -48,3 +48,9 @@ kompose --provider openshift convert
 #convet yaml to jason format
 kompose convert -j
 
+#The four pieces required for deployment
+#We've just performed four main things
+1) created a container 
+2) created the Kubernetes manifest 
+3) pushed the container to a registry  
+4) finally told Kubernetes all about these pieces with an updated manifest.
