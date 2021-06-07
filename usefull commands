@@ -54,3 +54,7 @@ kompose convert -j
 2) created the Kubernetes manifest 
 3) pushed the container to a registry  
 4) finally told Kubernetes all about these pieces with an updated manifest.
+#working with deployments
+kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1
+kubectl edit deployment kubernetes-bootcamp 
+kubectl get pods
