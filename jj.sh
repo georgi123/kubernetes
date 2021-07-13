@@ -24,7 +24,7 @@ case $option in
  tsh kube login $2 ;;
  -ns)
  echo "Node search"
- tsh ls |awk '{print $1}'|grep $2;;
+ tsh ls |awk '{print $1}'|egrep $2;;
   -nl)
  echo "List available nodes"
  tsh ls |awk '{print $1}';;
@@ -32,6 +32,8 @@ case $option in
  echo "Login via ssh."
  node=$2
  tsh ssh root@$node ;;
+ -s)
+ tsh status;;
  -lo)
  tsh logout ;;
  -h)
@@ -40,15 +42,9 @@ case $option in
  echo "Use -kl to login to k8s cluster"
  echo "Use -cl to list clusters, -nl to list nodes, use -login to login via ssh."
  echo "Use -ns to search for node"
+ echo "Use -s to see tsh status."
  echo "Use -l to loggo via ssh to neode"
  echo "Use -lo to logout from teleport destination."
- 
- 
+
+
 esac
-
-
-
-
-
-
-
