@@ -35,7 +35,7 @@ case $option in
  -cp)
  $2=file
  $3=node
- tsh scp $file @$node:~;;
+ tsh scp $file $node:~;;
  -s)
  tsh status;;
  -lo)
@@ -48,7 +48,7 @@ case $option in
  echo "Use -ns to search for node"
  echo "Use -s to see tsh status."
  echo "Use -l to loggo via ssh to neode"
- echo -n "Use cp to make scp with parmas \$2=file \$3=node."
+ echo -n "Use -cp to make scp with parmas \$2=file \$3=node."
  echo "Use -lo to logout from teleport destination."
 
 
