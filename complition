@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#if you whant to execute command bellow have to install bash-completion first.
+
 
 complete -W 'eu-tlp.sbtech.info us-tlp.sbtech.info' host
 complete -W 'eu-tlp.sbtech.info us-tlp.sbtech.info' dig
