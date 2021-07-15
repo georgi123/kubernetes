@@ -32,6 +32,12 @@ case $option in
  echo "Login via ssh."
  node=$2
  tsh ssh root@$node ;;
+ -jae)
+ echo "Connecting to ansibele EU."
+ tsh ssh root@cip-lt-ansible-1;;
+ -jau)
+ echo "Connecting to ansibele US."
+ tsh ssh root@njp-lt-ansible-1;;
  -cpe)
  $2=file
  $3=node
@@ -39,7 +45,7 @@ case $option in
  -cpu)
  $2=file
  $3=node
- tsh scp --proxy=us-tlp.sbtech.info:443 $file $node:~;; 
+ tsh scp --proxy=us-tlp.sbtech.info:443 $file $node:~;;
  -s)
  tsh status;;
  -lo)
@@ -52,6 +58,8 @@ case $option in
  echo "Use -ns to search for node"
  echo "Use -s to see tsh status."
  echo "Use -l to loggo via ssh to neode"
+ echo "Use -jae to login ansible EU"
+ echo "Use -jau to login ansible US"
  echo -n "Use -cpe or -cpu for region to make scp with parmas \$2=file \$3=node."
  echo "Use -lo to logout from teleport destination."
 
