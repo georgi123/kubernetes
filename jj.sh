@@ -3,6 +3,8 @@
 
 if (( "$#" < 1 )); then echo "use -h for help."; fi
 
+complition
+
 option=$1
 
 
