@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+complete -W 'eu-tlp.sbtech.info us-tlp.sbtech.info' host
+complete -W 'eu-tlp.sbtech.info us-tlp.sbtech.info' dig
+complete -W '-eu -us -cl -kls -kl -ns -nl -l -jae -jau -cpe -cpu -s -lo -h' jj
+
+
