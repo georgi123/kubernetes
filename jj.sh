@@ -1,9 +1,9 @@
 #!/bin/bash
 
+complete -W '-eu -us -cl -kls -kl -ns -nl -l -jae -jau -cpe -cpu -s -lo -h' jj
 
 if (( "$#" < 1 )); then echo "use -h for help."; fi
 
-complete -W '-eu -us -cl -kls -kl -ns -nl -l -jae -jau -cpe -cpu -s -lo -h' jj
 
 option=$1
 
