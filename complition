@@ -13,11 +13,11 @@ case $1 in
 
 -eu)
  complete -W '-eu -us -cl -kls -kl -ns -nl -l -jae -jau -cpe -cpu -s -lo -h' jj
- jj -nl > /mnt/c/Users/georgi.dimi/Downloads/scripts/eunodes
+ complete -W '$(cat eunodes)' jj -ns
  complete -W '$(cat eunodes)' jj -l ;;
 -us)
  complete -W '-eu -us -cl -kls -kl -ns -nl -l -jae -jau -cpe -cpu -s -lo -h' jj
- jj -nl > /mnt/c/Users/georgi.dimi/Downloads/scripts/usnodes
+ complete -W '$(cat usnodes)' jj -ns
  complete -W '$(cat usnodes)' jj -l ;;
 *)
  echo "posible options is -eu or -us" ;;
